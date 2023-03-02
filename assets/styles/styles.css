@@ -7,7 +7,9 @@
 
 body {
     background-color: #a52a2a;
+    overflow-x: hidden;
 }
+
 
 .logo {
     position: absolute;
@@ -164,3 +166,25 @@ table, th, td {
     border: hidden;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid red;
+}
+
+.cardImagen{
+    height: 10rem;
+}
+.cardDiv{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+}
