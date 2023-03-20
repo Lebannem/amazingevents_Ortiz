@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="icon" href="/assets/img/favi.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Upcoming Events</title>
+    <title>Stats</title>
 </head>
 <body>
     <header> 
@@ -30,10 +30,10 @@
                     <img src="/assets/img/LogoAmazingEvents.png" alt="Amazing-Events" width="100" height="30">
                 </a>
                 <a class="nav-link text-light" href="/index.html">Home</a>
-                <a class="nav-link text-light" href="#">Upcoming Events</a>
-                <a class="nav-link text-light" href="/pages/pastevents.html" >Past Events</a>
+                <a class="nav-link text-light" href="/pages/upcomingevents.html">Upcoming Events</a>
+                <a class="nav-link text-light" href="/pages/pastevents.html">Past Events</a>
                 <a class="nav-link text-light" href="/pages/contact.html">Contact</a>
-                <a class="nav-link text-light" href="/pages/stats.html">Stats</a>
+                <a class="nav-link text-light" href="#">Stats</a>
             </div>
         </nav>
     </div>
@@ -45,10 +45,10 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-primary p-4">
                     <a class="nav-link text-light" aria-current="page" href="/index.html">Home</a>
-                    <a class="nav-link text-light" href="#">Upcoming Events</a>
-                    <a class="nav-link text-light" href="/pages/past_events.html">Past Events</a>
+                    <a class="nav-link text-light" href="/pages/upcomingevents.html">Upcoming Events</a>
+                    <a class="nav-link text-light" href="/pages/pastevents.html">Past Events</a>
                     <a class="nav-link text-light" href="/pages/contact.html">Contact</a>
-                    <a class="nav-link text-light" href="/pages/stats.html">Stats</a>
+                    <a class="nav-link text-light" href="#">Stats</a>
                 </div>
             </div>
             <nav class="navbar navbar-dark bg-primary">
@@ -95,85 +95,45 @@
         <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
-
-    
 
 
-
-        <!-- <form class="d-flex">
-        <div class="container-fluid">
-            <label for="category">Category</label>
-            <input type="checkbox" id="category" value="category1">
-            <label for="category">Category</label>
-            <input type="checkbox" value="category2">
-            <label for="category">Category</label>
-            <input type="checkbox" value="category3">
-            <label for="category">Category</label>
-            <input type="checkbox"  value="category4">
-            <label for="category">Category</label>
-            <input type="checkbox"  value="category5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="row row-cols-12 row-cols-md-2 gap-4 m-4"
+                            id="cardcontainer">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="searchbar">
-            <input class="search" type="search" placeholder="Search" aria-label="Search" id="searchb">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </div>
-        </form> -->
+        </main>
 
-
-
-
-
-
-        <section>
-        <div class="d-flex justify-content-around flex-wrap">
-            <form action="">
-                <fieldset id="chbox" class="d-inline-flex">
-                    
-                </fieldset>
-            </form>
-            <form action="">
-                <fieldset class="d-flex justify-content-end">
-                    <input class="form-control me-2" type="search" placeholder="Search" id="search" aria-label="Search">
-                </fieldset>
-            </form>
-    </div>
-
-        <div  class="d-flex justify-content-around m-4 flex-wrap" id="cartas">
-            
-        </div>
-    </section>
-
-</main>
-
-    
-    <footer>
+        <footer>
         
-        <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button class="botones"> <img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
-            <button class="botones"> <img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
-            <button class="botones"> <img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 <button class="botones"> <img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
                 <button class="botones"> <img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
                 <button class="botones"> <img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <button class="botones"> <img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
+                    <button class="botones"> <img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
+                    <button class="botones"> <img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
+                </div>
+                </div>
+                <p class="foot">FE06-TN</p>
             </div>
-            </div>
-            <p class="foot">FE06-TN</p>
-        </div>
-        </nav>
-    </footer>
-
+            </nav>
+        </footer>
         
-        <script type="module" src="/assets/js/upcomingevents.js"></script>
-        <script type="module" src="/assets/js/data.js"></script>
-        <script type="module" src="/assets/js/amazing.json"></script>
+        <script type="module" src="/data.js"></script>
+        <script type="module" src="/assets/js/details.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+    </html>
+
