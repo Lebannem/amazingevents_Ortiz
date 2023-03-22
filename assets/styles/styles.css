@@ -7,6 +7,14 @@
 
 body {
     background-color: #a52a2a;
+    overflow-x: hidden;
+}
+
+.inputDiv{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #FEE0C0;
 }
 
 .logo {
@@ -25,9 +33,8 @@ body {
     justify-content:center;
     /* border: 1px solid black; */
     margin-left: 200px;
-
-
 }
+
 .headerr {
     background-color: #FEE0C0;
     width: 100%;
@@ -59,25 +66,21 @@ body {
 } */
 
 .d-flex {
-
     display: flex;
     height: 50px;
     align-items: center;
     /* border: 1px solid green; */
-    background-color: #820000;
-
-
 }
-.container-fluid {
 
+.container-fluid {
     justify-content: left;
     gap: 5px;
     /* border: 1px solid #a52a2a; */
     font-size: 20px;
     align-items: center;
     color: black;
-
 }
+
 
 .searchbar {
     width: 50%;
@@ -164,3 +167,60 @@ table, th, td {
     border: hidden;
 }
 
+.carouselExampleAutoplaying {
+    width: 100%;
+    height: 150px;
+}
+/* 
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid red;
+}
+
+.cardImagen{
+    height: 10rem;
+}
+.cardDiv{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+} */
+
+.card {
+    box-shadow: 2px 2px 4px black;
+}
+
+.card-img-top {
+    width: 100% !important;
+    height: 55% !important;
+    object-fit: cover !important;
+}
+
+.future{
+    display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 760px){
+    .future{
+        display: initial;
+    }
+
+    .antes{
+        display: none;
+        
+    }
+
+}
+
+.Tabla {
+    margin-top: 500px;
+}
