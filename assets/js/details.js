@@ -1,6 +1,6 @@
 
 
-let eventcard = document.getElementById("cardcontainer");
+let eventcard = document.getElementById("cardContainer");
 const queryString = location.search
 const params = new URLSearchParams(queryString)
 const id = params.get("id")
@@ -21,7 +21,6 @@ console.log(data);
 function armarCard(card, container) {
     container.innerHTML = "";
     let div = document.createElement("div")
-    div.classList = 'card-big'
     div.className = "card-big"
     div.innerHTML += `
     <img src="${card.image}" class="card-img-top"

@@ -1,4 +1,90 @@
+import data from './data.js';
 
+
+const eventsCards = document.getElementById("cartas");
+const checkbox = document.getElementById("checkbox");
+const $search = document.getElementById("search")
+const fragment = document.createDocumentFragment();
+
+
+function carta(array, container) {
+      container.innerHTML = ""
+      for (let nuevaCard of array) {
+        if (data.currentDate > nuevaCard.date) {
+          let div = document.createElement("div")
+          div.className = "card col-4 col-sm-3 m-2" //antes era el cardDiv
+          div.innerHTML += `
+          <img src="${nuevaCard.image}" class="card-img-top" alt="${nuevaCard.name.toLowerCase()}">
+          <div class="card-body">
+              <h5 class="card-title d-flex justify-content-center">${nuevaCard.name}</h5>
+              <p class="card-text d-flex justify-content-center">${nuevaCard.category}</p>
+              <div class="d-flex justify-content-around">
+              <p>${nuevaCard.price}</p>
+              <a href="./pages/details.html?id=${nuevaCard._id}" class="btn btn-primary">View More</a>
+              </div>
+          </div>`
+          fragment.appendChild(div);
+      }
+      container.appendChild(fragment);
+  }}
+  
+  carta(data.events, eventsCards)
+  
+  const createCategory = (array) => {
+    let categories = array.map(category => category.category)
+    categories = categories.reduce((acumulador, elemento) => {
+        if (!acumulador.includes(elemento)) {
+            acumulador.push(elemento);
+        }
+        return acumulador
+    }, [])
+    return categories
+}
+  
+  let categories = createCategory(data.events)
+  
+  const createCheckbox = (categories, checkbox) => {
+      categories.forEach(category => {
+          let div = document.createElement('div')
+          div.className = `form-check mt-3`
+          div.innerHTML = `
+          <input type="checkbox" id="${category}" name="categories" class="form-check-input" value="${category}">
+          <label for="${category}" class="form-check-label me-1">${category}</label>
+          `
+          checkbox.appendChild(div)
+      });
+  }
+  
+  createCheckbox(categories, checkbox)
+  
+  const filterSearch = (array, value) => {
+      let filtrsearch = array.filter(buscador => buscador.name.toLowerCase().includes(value.toLowerCase().trim()))
+      return filtrsearch
+  }
+  
+  const filterCheck = (array, value) => {
+      const checkedCategories = Array.from(checkbox.querySelectorAll('input[type="checkbox"]:checked')).map((el) => el.value);
+      if (checkedCategories.length === 0) {
+          return array;
+      } else {
+          let filtrado = array.filter(check => checkedCategories.includes(check.category));
+          return filtrado;
+      }
+  }
+  
+  
+  checkbox.addEventListener('change', (e) => {
+    let dataFilter = filterCheck(data.events, e.target.value)
+    carta(dataFilter, eventsCards)
+})
+$search.addEventListener('keyup', (e) =>{
+    let dataFilter2 = filterSearch(data.events, e.target.value)
+    carta(dataFilter2, eventsCards)
+})
+
+
+
+  
 /* const data = {
     "currentDate": "2022-01-01",
     "events": [
@@ -172,96 +258,3 @@
       }
     ]
   } */
-
-
-  import data from './data.js';
-
-  console.log([document])
-  
-  const eventsCards = document.getElementById("cartas");
-  
-  const checkbox = document.getElementById("chbox");
-  
-  const $search = document.getElementById("search")
-  
-  const fragment = document.createDocumentFragment();
-  
-
-
-
-  function carta(array, container) {
-      container.innerHTML = ""
-      for (let newcard of array) {
-        if (data.currentDate > newcard.date) {
-          let div = document.createElement("div")
-          div.className = "card col-4 col-sm-3 m-2" //cardDiv
-          div.innerHTML += `
-          <img src="${newcard.image}" class="card-img-top" alt="${newcard.name.toLowerCase()}">
-          <div class="card-body">
-              <h5 class="card-title d-flex justify-content-center">${newcard.name}</h5>
-              <p class="card-text d-flex justify-content-center">${newcard.category}</p>
-              <div class="d-flex justify-content-around">
-              <p>${newcard.price}</p>
-              <a href="./pages/details.html?id=${newcard._id}" class="btn btn-primary">View More</a>
-              </div>
-          </div>`
-          fragment.appendChild(div);
-      }
-      container.appendChild(fragment);
-  }}
-  
-  carta(data.events, eventsCards)
-  
-  const createCategory = (array) => {
-      let categories = array.map(category => category.category)
-      categories = categories.reduce((cosa, otraCosa) => {
-          if (!cosa.includes(otraCosa)) {
-              cosa.push(otraCosa);
-          }
-          return cosa
-      }, [])
-      return categories
-  }
-  
-  let categories = createCategory(data.events)
-  
-  const createChbox = (categories, checkbox) => {
-      categories.forEach(category => {
-          let div = document.createElement('div')
-          div.className = `form-check mt-3`
-          div.innerHTML = `
-          <input type="checkbox" id="${category}" name="categories" class="form-check-input" value="${category}">
-          <label for="${category}" class="form-check-label me-1">${category}</label>
-          `
-          checkbox.appendChild(div)
-      });
-  }
-  
-  createChbox(categories, checkbox)
-  
-  const filtSearch = (array, value) => {
-      let filtrsearch = array.filter(buscador => buscador.name.toLowerCase().includes(value.toLowerCase().trim()))
-      return filtrsearch
-  }
-  
-  const filtCheck = (array, value) => {
-      const checkedCategories = Array.from(checkbox.querySelectorAll('input[type="checkbox"]:checked')).map((el) => el.value);
-      if (checkedCategories.length === 0) {
-          return array;
-      } else {
-          let filtrado = array.filter(check => checkedCategories.includes(check.category));
-          return filtrado;
-      }
-  }
-  
-  
-  $search.addEventListener('keyup', (e) =>{
-      let datereando = filtSearch(data.events, e.target.value)
-      carta(datereando, eventsCards)
-  })
-  
-  
-  checkbox.addEventListener('change', (e) => {
-      let nuevofiltrado = filtCheck(data.events, e.target.value)
-      carta(nuevofiltrado, eventsCards)
-  })
