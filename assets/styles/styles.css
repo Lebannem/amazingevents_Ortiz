@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+.tablaa {
+    margin-top: 400px;
+    padding-bottom: 20px;
+}
 .inputDiv{
     display: flex;
     align-items: baseline;
@@ -210,17 +214,20 @@ table, th, td {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 760px){
-    .future{
+    .big{
         display: initial;
     }
 
-    .antes{
+    .small{
         display: none;
-        
     }
-
 }
 
 .Tabla {
     margin-top: 500px;
+}
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
 }
