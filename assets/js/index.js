@@ -43,10 +43,12 @@ let categories = createCategory(data.events)
 const createCheckbox = (categories, checkbox) => {
     categories.forEach(category => {
         let div = document.createElement('div')
-        div.className = `form-check mt-3`
+        div.className = `form-check form-check-inline`
         div.innerHTML = `
-        <input type="checkbox" id="${category}" name="categories" class="form-check-input" value="${category}">
-        <label for="${category}" class="form-check-label me-1">${category}</label>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="${category}" name="categories" class="form-check-input" value="${category}">
+        <label class="form-check-label" for="${category}" class="form-check-label me-1">${category}</label>
+        </div>
         `
         checkbox.appendChild(div)
     });

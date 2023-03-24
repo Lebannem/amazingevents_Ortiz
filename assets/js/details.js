@@ -21,10 +21,9 @@ console.log(data);
 function armarCard(card, container) {
     container.innerHTML = "";
     let div = document.createElement("div")
-    div.className = "card-big"
+    div.className = "flex-wrap d-inline-flex"
     div.innerHTML += `
-    <img src="${card.image}" class="card-img-top"
-        alt="...">
+    <img src="${card.image}" class="img-fluid rounded-start rounded-3" alt="${card.name}" width="100%">
     <div class="card-body">
     <h5 class="card-title d-flex justify-content-center">${card.name}</h5>
     <p class="card-text d-flex justify-content-center">${card.category}</p>
@@ -34,7 +33,6 @@ function armarCard(card, container) {
         <p class="card-text"><h4>Attendance crowd average: </h4>${card.capacity}</p>
         <p class="d-flex justify-content-around"><p>${card.price}</p>
     </div>
-
     `
     container.appendChild(div);
 }

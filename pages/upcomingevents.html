@@ -11,6 +11,7 @@
 </head>
 <body>
     <header> 
+        <div id="wrapper">
     <!-- <div>
     <img src="/assets/img/LogoAmazingEvents.png" alt="logo amaging events" class="logo">
     </div>
@@ -23,77 +24,99 @@
         <a href="./pages/stats.html" class="links1">Stats</a>
     </div>
     </nav> -->
-    <div class="antes">
-        <nav class="navbar bg-primary">
-            <div class="container col">
-                <a class="navbar-brand" href="/index.html"><img src="/assets/img/LogoAmazingEvents.png" alt="Amazing-Events" width="100" height="30"></a>
-                <a class="nav-link text-light" href="/index.html">Home</a>
-                <a class="nav-link text-light" href="#">Upcoming Events</a>
-                <a class="nav-link text-light" href="/pages/pastevents.html" >Past Events</a>
-                <a class="nav-link text-light" href="/pages/contact.html">Contact</a>
-                <a class="nav-link text-light" href="/pages/stats.html">Stats</a>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+        <a class="navbar-brand">
+            <img src="/assets/img/LogoAmazingEvents.png" alt="Logo" width="150" height="30" class="d-inline-block align-text-top">
+        </a>
+        <div class="d-flex">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Upcoming Events</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./pastevents.html">Past Events</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./stats.html">Stats</a>
+                </li>
+            </ul>
             </div>
-        </nav>
-    </div>
-    <div class="future">
-        <div class="d-flex justify-content-between bg-primary align-items-center">
-            <a class="navbar-brand ms-3" href="/index.html"><img src="/assets/img/LogoAmazingEvents.png" alt="Amazing-Events" width="100" height="30"></a>
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-primary p-4">
-                    <a class="nav-link text-light" aria-current="page" href="/index.html">Home</a>
-                    <a class="nav-link text-light" href="#">Upcoming Events</a>
-                    <a class="nav-link text-light" href="/pages/past_events.html">Past Events</a>
-                    <a class="nav-link text-light" href="/pages/contact.html">Contact</a>
-                    <a class="nav-link text-light" href="/pages/stats.html">Stats</a>
-                </div>
-            </div>
-            <nav class="navbar navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-            </nav>
         </div>
-    </div>
-
-    
+        </div>    
     </header>
+    
+    <main id="content">        
+        
+        <div id="carouselExampleAutoplaying" class="carousel slide bg-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="/index.html" class="links2">Home</a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" class="links2">Upcoming Events</a>
+            </div>
+            <div class="carousel-item">
+                <a href="./pastevents.html" class="links2">Past Events</a>
+            </div>
+            <div class="carousel-item">
+                <a href="./contact.html" class="links2">Contact</a>
+            </div>
+            <div class="carousel-item">
+                <a href="./stats.html" class="links2">Stats</a>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <div class="inputDiv">
 
+        <div id="checkbox">
+        </div>
+            <div style="display: flex;">
+            <input type="text" class="form-control" id="search" placeholder="Search">
+            </div>
+        </div>
 
-    <main>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-            <a href="/index.html" class="links2">Home</a>
+        <div class="d-flex justify-content-around m-4 flex-wrap" id="cartas">
         </div>
-        <div class="carousel-item">
-            <a href="./pages/upcomingevents.html" class="links2">Upcoming Events</a>
-        </div>
-        <div class="carousel-item">
-            <a href="./pages/pastevents.html" class="links2">Past Events</a>
-        </div>
-        <div class="carousel-item">
-            <a href="./pages/contact.html" class="links2">Contact</a>
-        </div>
-        <div class="carousel-item">
-            <a href="./pages/stats.html" class="links2">Stats</a>
-        </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
+        
+        <!-- <section>
+        <div class="d-flex justify-content-around flex-wrap">
+            <form action="">
+                <fieldset id="checkbox" class="d-inline-flex">
+                    
+                </fieldset>
+            </form>
+            <form action="">
+                <fieldset class="d-flex justify-content-end">
+                    <input class="form-control me-2" type="search" placeholder="Search" id="search" aria-label="Search">
+                </fieldset>
+            </form>
     </div>
-    
 
-    
+        <div  class="d-flex justify-content-around m-4 flex-wrap" id="cartas">
+            
+        </div>
+    </section> -->
 
 
 
@@ -117,53 +140,29 @@
         </form> -->
 
 
-
-
-
-
-        <section>
-        <div class="d-flex justify-content-around flex-wrap">
-            <form action="">
-                <fieldset id="checkbox" class="d-inline-flex">
-                    
-                </fieldset>
-            </form>
-            <form action="">
-                <fieldset class="d-flex justify-content-end">
-                    <input class="form-control me-2" type="search" placeholder="Search" id="search" aria-label="Search">
-                </fieldset>
-            </form>
-    </div>
-
-        <div  class="d-flex justify-content-around m-4 flex-wrap" id="cartas">
-            
-        </div>
-    </section>
-
 </main>
-
     
-    <footer>
+<footer>
         
-        <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button class="botones"> <img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
-            <button class="botones"> <img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
-            <button class="botones"> <img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <button class="botones"> <img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
-                <button class="botones"> <img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
-                <button class="botones"> <img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
-            </div>
-            </div>
-            <p class="foot">FE06-TN</p>
+    <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <button class="botones"> <img src="./assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </button>
+        <button class="botones"> <img src="./assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"> </button>
+        <button class="botones"> <img src="./assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"> </button>
+        </button> -->
+        <div class="" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <button class="botones"> <a href="https://www.instagram.com/"><img src="/assets/img/instagram-logo.png" alt="Logo Instagram" id="isntagramlogo" class="logosredes"> </a></button>
+            <button class="botones"> <a href="https://www.facebook.com/"><img src="/assets/img/facebook-logo.png" alt="Logo Facebook" id="facebooklogo" class="logosredes"></a> </button>
+            <button class="botones"> <a href="https://www.whatsapp.com/"><img src="/assets/img/whatsapp-logo.png" alt="Logo Whatsapp" id="whatsapplogo" class="logosredes"></a> </button>
         </div>
-        </nav>
-    </footer>
+        </div>
+        <p class="foot">FE06-TN</p>
+    </div>
+    </nav>
+</footer>
 
         
         <script type="module" src="/assets/js/upcomingevents.js"></script>

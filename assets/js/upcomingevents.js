@@ -19,7 +19,7 @@ function carta(array, container) {
               <p class="card-text d-flex justify-content-center">${nuevaCard.category}</p>
               <div class="d-flex justify-content-around">
               <p>${nuevaCard.price}</p>
-              <a href="./pages/details.html?id=${nuevaCard._id}" class="btn btn-primary">View More</a>
+              <a href="/pages/details.html?id=${nuevaCard._id}" class="btn btn-primary">View More</a>
               </div>
           </div>`
           fragment.appendChild(div);
